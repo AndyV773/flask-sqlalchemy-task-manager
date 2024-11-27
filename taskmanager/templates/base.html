@@ -7,6 +7,8 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
         type="text/css">
+    <!-- icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     <title>Task Manager</title>
 </head>
@@ -22,7 +24,7 @@
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('home') }}">Home</a></li>
                     <li><a href="">New Task</a></li>
-                    <li><a href="">Categories</a></li>
+                    <li><a href="{{ url_for('categories') }}">Categories</a></li>
                 </ul>
             </div>
         </nav>
@@ -31,7 +33,7 @@
         <ul class="sidenav" id="mobile-demo">
             <li><a href="{{ url_for('home') }}">Home</a></li>
             <li><a href="">New Task</a></li>
-            <li><a href="">Categories</a></li>
+            <li><a href="{{ url_for('categories') }}">Categories</a></li>
         </ul>
     </header>
 
