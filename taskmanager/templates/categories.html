@@ -21,16 +21,17 @@
             <div class="card-action">
                 <a href="{{ url_for('edit_category', category_id=category.id) }}" class="btn green accent-4">Edit</a>
                 <!-- Delete Modal Trigger -->
-                <!-- <a class="waves-effect waves-light modal-trigger btn red" href="#modal1">Delete</a> -->
-                <a href="{{ url_for('delete_category', category_id=category.id) }}" class="btn red">Delete</a>
+                <a class="waves-effect waves-light modal-trigger btn red" href="#modal{{ category.id }}">Delete</a>
+                <!-- <a href="{{ url_for('delete_category', category_id=category.id) }}" class="btn red">Delete</a> -->
             </div>
         </div>
     </div>
     <!-- Delete Modal Structure -->
-    <div id="modal1" class="modal">
+    <div id="modal{{ category.id }}" class="modal">
         <div class="modal-content">
-            <h4>Modal Header</h4>
-            <p>A bunch of text</p>
+            <h4>The Lazy Modal</h4>
+            <p>Are you sure you want to delete {{ category.category_name }}?</p>
+            <strong>This will also delete all related tasks</strong>
         </div>
         <div class="modal-footer">
             <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancel</a>
